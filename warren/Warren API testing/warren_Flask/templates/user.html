@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: center;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+</head>
+<body>
+  <div class="container-fluid">
+    
+    <div class="row">
+      <div class="col-sm-3" >
+        <h2>User Info</h2>
+    <table>
+        <tr>
+          <th>Entity </th>
+          <th>Values</th>
+        </tr>
+  
+    
+        <tr><td>Name</td><td>{{name}}</td></tr>
+        <tr><td>Email</td><td>{{email}}</td></tr>
+        <tr><td>Role</td><td>{{role}}</td></tr>
+        <tr><td>Token</td><td>{{token}}</td></tr>
+     
+        
+      </table>
+      </div>
+
+      <div class="col-sm-5" >
+        <h2>Account Info</h2>
+
+    <table>
+      <tr>
+        <th>Container</th>
+        <th>Balance</th>
+        <th>Currency</th>
+        <th>Acc No</th>
+        <th>Acc Name</th>
+      </tr>
+
+      {% for info in account %}
+        <tr>
+            <td>{{info[0]}}</td>
+            <td>{{info[1]}}</td>
+            <td>{{info[2]}}</td>
+            <td>{{info[3]}}</td>
+            <td>{{info[4]}}</td>
+        </tr>
+      {% endfor %}
+      
+    </table>
+      </div>
+
+      <div class="col-sm-3" >
+        <h2>Statements</h2>
+
+    <table>
+      <tr>
+        <th>Due Amount</th>
+        <th>Currency</th>
+        <th>Due Date</th>
+      </tr>
+
+      {% for info in statement %}
+        <tr>
+            <td>{{info[0]}}</td>
+            <td>{{info[1]}}</td>
+            <td>{{info[2]}}</td>
+     
+        </tr>
+      {% endfor %}
+      
+    </table>
+      </div>
+
+    </div>
+    
+  </div>
+
+    
+    
+
+    {% if status_code == 200 %}
+    
+    
+
+    
+
+    
+   
+    {% endif %}
+
+        
+        
+
+</body>
+</html>

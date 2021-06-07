@@ -1,0 +1,38 @@
+{
+    "option": {
+        "IND": {
+            "category": "NULL", 
+            "product": "IND", 
+            "isOpen": true, 
+            "exchange": "NULL", 
+            "marketType": "OPTION", 
+            "productName": "index option", 
+            "date": "2021-02-10", 
+            "sessionHours": {
+                "regularMarket": [
+                    {
+                        "start": "2021-02-10T09:30:00-05:00", 
+                        "end": "2021-02-10T16:15:00-05:00"
+                    }
+                ]
+            }
+        }, 
+        "EQO": {
+            "category": "NULL", 
+            "product": "EQO", 
+            "isOpen": true, 
+            "exchange": "NULL", 
+            "marketType": "OPTION", 
+            "productName": "equity option", 
+            "date": "2021-02-10", 
+            "sessionHours": {
+                "regularMarket": [
+                    {
+                        "start": "2021-02-10T09:30:00-05:00", 
+                        "end": "2021-02-10T16:00:00-05:00"
+                    }
+                ]
+            }
+        }
+    }
+}

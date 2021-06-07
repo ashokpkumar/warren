@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script type='text/javascript' src='https://cdn.yodlee.com/fastlink/v3/initialize.js'></script>
+    <body>
+     
+      <div id="container-fastlink">
+        <div style="text-align: center;">
+          <input type="submit" id="btn-fastlink" value="Link an Account">
+        </div>
+      </div>
+
+      <script>
+        (function (window) {
+          //Open FastLink
+          var fastlinkBtn = document.getElementById('btn-fastlink');
+    
+          fastlinkBtn.addEventListener('click', function() {
+            window.fastlink.open({
+              fastLinkURL: 'https://fl4.sandbox.yodlee.com/authenticate/restserver/fastlink',
+              accessToken: 'LpcueihA7BEhGF9TzOV3j0Ux23ge',
+              params: {
+                userExperienceFlow : 'Aggregation'
+              },
+              onSuccess: function (data) {
+                console.log(data);
+              },
+              onError: function (data) {
+                console.log(data);
+              },
+              onExit: function (data) {
+                console.log(data);
+              },
+              onEvent: function (data) {
+                console.log(data);
+              }
+            },
+            'container-fastlink');
+          },
+          false);
+        }(window));
+      </script>
+    </body>
+</html>
